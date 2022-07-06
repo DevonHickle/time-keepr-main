@@ -6,8 +6,8 @@ import ToolingIcon from "./icons/IconTooling.vue";
 import EcosystemIcon from "./icons/IconEcosystem.vue";
 import CommunityIcon from "./icons/IconCommunity.vue";
 import SupportIcon from "./icons/IconSupport.vue";
-import Datepicker from "@vuepic/vue-datepicker";
-import "@vuepic/vue-datepicker/dist/main.css";
+import DatePicker from "./DatePicker.vue";
+import UsersInput from "./UsersInput.vue";
 const picked = ref(new Date());
 </script>
 
@@ -27,16 +27,16 @@ const picked = ref(new Date());
     <template #heading>Your Name</template>
 
     Please enter your name so we can track your upcoming time off
+    <br />
+    <br />
+      <UsersInput />
   </TimeKeeprItem>
 
   <TimeKeeprItem>
     <template #icon>
       <ToolingIcon />
     </template>
-    <template #heading
-      >Date Picker
-      <Datepicker v-model="picked"></Datepicker>
-    </template>
+      <DatePicker />
   </TimeKeeprItem>
 
   <TimeKeeprItem>
