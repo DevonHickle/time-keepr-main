@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import TimeKeepr from "@/components/TimeKeepr.vue";
 </script>
 

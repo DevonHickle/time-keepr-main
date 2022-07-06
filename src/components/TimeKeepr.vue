@@ -6,9 +6,9 @@ import ToolingIcon from "./icons/IconTooling.vue";
 import EcosystemIcon from "./icons/IconEcosystem.vue";
 import CommunityIcon from "./icons/IconCommunity.vue";
 import SupportIcon from "./icons/IconSupport.vue";
-import DatePicker from "./DatePicker.vue";
 import UsersInput from "./UsersInput.vue";
-const picked = ref(new Date());
+import DatePicker from "./DatePicker.vue";
+import CurrentlyOffline from "./CurrentlyOffline.vue";
 </script>
 
 <template>
@@ -17,26 +17,24 @@ const picked = ref(new Date());
       <DocumentationIcon />
     </template>
     <template #heading>Time Off?</template>
-    Enter your name and input your days off here. We will keep a log of who is currently out, and any upcoming time off.
+    Enter your name and input your days off here. We will keep a log of who is
+    currently out, and any upcoming time off.
   </TimeKeeprItem>
 
     <TimeKeeprItem>
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>Your Name</template>
-
-    Please enter your name so we can track your upcoming time off
-    <br />
-    <br />
-      <UsersInput />
+    <template #heading>Sign In Here</template>
+    <UsersInput />
   </TimeKeeprItem>
 
   <TimeKeeprItem>
     <template #icon>
-      <ToolingIcon />
+      <DocumentationIcon />
     </template>
-      <DatePicker />
+    <template #heading>Select Your Dates</template>
+    <DatePicker />
   </TimeKeeprItem>
 
   <TimeKeeprItem>
@@ -44,15 +42,7 @@ const picked = ref(new Date());
       <CommunityIcon />
     </template>
     <template #heading>Currently Offline</template>
-
-    See who is currently offline and their expected return date: 
-
-  <br />
-  <br />
-  Name: Return Date
-  <br />
-  <br />
-
+    <CurrentlyOffline />
   </TimeKeeprItem>
 
   <TimeKeeprItem>
@@ -61,6 +51,6 @@ const picked = ref(new Date());
     </template>
     <template #heading>Upcoming Timeoff</template>
 
-   Here is the current list of upcoming time off requests
+    Here is the current list of upcoming time off requests
   </TimeKeeprItem>
 </template>
