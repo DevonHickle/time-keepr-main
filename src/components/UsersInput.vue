@@ -2,8 +2,8 @@
   <div class="users">
     <label for="full name">Select Name:</label>
     <select>
-      <option>
-        {{ Users.name }}
+      <option value="test">
+       Test
       </option>
     </select>
   </div>
@@ -36,7 +36,6 @@
 </style>
 
 <script lang="ts">
-import Users from "./data/Users.js"
 export default {
   props: {
     Users: {
