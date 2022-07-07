@@ -1,9 +1,11 @@
 <template>
-  <div class="details">
-    <form>
-      <label for="full name">Full Name:</label>
-      <input type="text" placeholder="Please input your full name..." required>
-    </form>
+  <div class="users">
+    <label for="full name">Select Name:</label>
+    <select>
+      <option>
+        {{ Users.name }}
+      </option>
+    </select>
   </div>
 </template>
 
@@ -33,6 +35,14 @@
 }
 </style>
 
-<script setup lang="ts">
-  //
+<script lang="ts">
+import Users from "./data/Users.js"
+export default {
+  props: {
+    Users: {
+      type: Object,
+      required: true
+    }
+  }
+};
 </script>

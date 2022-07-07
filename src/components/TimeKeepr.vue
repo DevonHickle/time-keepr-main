@@ -21,7 +21,7 @@ import CurrentlyOffline from "./CurrentlyOffline.vue";
     currently out, and any upcoming time off.
   </TimeKeeprItem>
 
-    <TimeKeeprItem>
+  <TimeKeeprItem>
     <template #icon>
       <EcosystemIcon />
     </template>
