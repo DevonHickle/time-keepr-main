@@ -1,13 +1,16 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import Datepicker from '@vuepic/vue-datepicker';
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
+import Datepicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 
-const app = createApp(App);
+loadFonts()
 
-app.use(router);
+createApp(App)
+  .use(router)
+  .use(vuetify)
+  .component('Datepicker', Datepicker)
+  .mount('#app')
 
-app.component('Datepicker', Datepicker);
-
-app.mount("#app");

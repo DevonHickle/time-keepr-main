@@ -1,12 +1,19 @@
 <template>
-  <div class="users">
-    <label for="full name">Select Name:</label>
-    <select>
-      <option value="test">
-       Test
-      </option>
-    </select>
-  </div>
+  <v-card class="mx-auto" max-width="300">
+    <v-list dense>
+      <v-subheader>Select Your Name</v-subheader>
+      <v-list-item-group v-model="model" mandatory color="primary">
+        <v-list-item v-for="(item, i) in items" :key="i">
+          <v-list-item-icon>
+            <v-icon v-text="item.icon"></v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.name"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-item-group>
+    </v-list>
+  </v-card>
 </template>
 
 <style scoped>
@@ -37,11 +44,42 @@
 
 <script lang="ts">
 export default {
-  props: {
-    Users: {
-      type: Object,
-      required: true
-    }
-  }
+  data: () => ({
+    selectedItem: 1,
+    items: [
+      {
+        name: "Devon Hickle",
+        position: "Automation Engineer",
+      },
+      {
+        name: "Evan Long",
+        position: "Developer",
+      },
+      {
+        name: "Shruthi Mekarthi",
+        position: "Developer",
+      },
+      {
+        name: "Nick Koss",
+        position: "Developer",
+      },
+      {
+        name: "Luther Huset",
+        position: "Automation Engineer",
+      },
+      {
+        name: "Bill Tervola",
+        position: "Customer Experience Lead",
+      },
+      {
+        name: "Andre Denney",
+        position: "Business Analyst",
+      },
+      {
+        name: "Sele Agbator",
+        position: "Scrum Master",
+      },
+    ],
+  }),
 };
 </script>
