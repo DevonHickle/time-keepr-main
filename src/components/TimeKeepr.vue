@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import TimeKeeprItem from "./TimeKeeprItem.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
 import ToolingIcon from "./icons/IconTooling.vue";
@@ -25,7 +24,7 @@ import CurrentlyOffline from "./CurrentlyOffline.vue";
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>Sign In Here</template>
+    <template #heading>Select Your Name</template>
     <UsersInput />
   </TimeKeeprItem>
 
