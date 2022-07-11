@@ -46,7 +46,7 @@
   export default {
     data () {
       return {
-        select: { state: 'Florida', abbr: 'FL' },
+        select: { state: 'Devon Hickle', abbr: 'AE' },
         items: [
           { name: 'Devon Hickle', position: 'AE' },
           { name: 'Luther Huset', position: 'AE' },
