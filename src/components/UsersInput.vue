@@ -1,37 +1,31 @@
 <template>
-      <v-select
-        v-model="select"
-        :hint="`${select.name}, ${select.position}`"
-        :items="items"
-        item-title="name"
-        item-value="position"
-        label="select"
-        persistent-hint
-        return-object
-        single-line
-      ></v-select>
+  <ui-select id="team-member-name-select" v-model="selected" :options="options" @selected="onSelected($event)"
+    >
+  </ui-select>
 </template>
 
 <style scoped>
- /**/
+/**/
 </style>
 
 <script lang="ts">
-  export default {
-    data () {
-      return {
-        select: { name: 'Devon Hickle', position: 'AE' },
-        items: [
-          { name: 'Devon Hickle', position: 'AE' },
-          { name: 'Luther Huset', position: 'AE' },
-          { name: 'Evan Long', position: 'Dev' },
-          { name: 'Shruthi', positon: 'Dev' },
-          { name: 'Nick Koss', position: 'Dev' },
-          { name: 'Bill Tervola', position: 'Customer Experience Lead' },
-          { name: 'Andre Denny', position: 'Business Analyst' },
-          { name: 'Sele Agbator', position: 'Scrum Master' },
-        ],
-      }
-    },
-  }
+const options = [
+  { label: "Devon Hickle" },
+  { label: "Luther Huset" },
+  { label: "Evan Long" },
+  { label: "Shruthi" },
+  { label: "Nick Koss" },
+  { label: "Bill Tervola" },
+  { label: "Andre Denny" },
+  { label: "Sele Agbator" },
+];
+
+export default {
+  data() {
+    return {
+      options,
+      selected: '',
+    };
+  },
+};
 </script>

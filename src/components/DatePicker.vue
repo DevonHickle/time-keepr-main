@@ -1,9 +1,7 @@
 <template #heading>
-  Date From
-  <Datepicker v-model="picked"></Datepicker>
-  To
-  <Datepicker v-model="picked"></Datepicker>
-      <button type="submit">Submit</button>
+  <ui-rangepicker v-model="date" outlined :labels="['Start Date', 'End Date']">
+  <template #separator>-</template>
+</ui-rangepicker>
 </template>
 
 <style scoped>
@@ -11,16 +9,11 @@
 </style>
 
 <script lang="ts">
-import Datepicker from "@vuepic/vue-datepicker";
-import "@vuepic/vue-datepicker/dist/main.css"
-import { ref } from '@vue/reactivity';
-const picked = ref(new Date());
-    export default {
-        components: { Datepicker },
-        data() {
-            return {
-                date: null,
-            };
-        }
+  export default {
+    data () {
+      return {
+        date: ['2020-02-12', '2020-03-24']
+      };
     }
+  };
 </script>
