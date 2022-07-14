@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TimeKeepr from "@/components/TimeKeepr.vue";
+import TimeKeeprMain from "../components/TimeKeeprMain.vue";
 </script>
 
 <template>
   <main>
-    <TimeKeepr />
+    <TimeKeeprMain />
   </main>
 </template>
