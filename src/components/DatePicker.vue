@@ -1,11 +1,11 @@
 <template #heading>
-  <ui-rangepicker v-model="date" outlined :labels="['Start Date', 'End Date']">
+  <ui-rangepicker :class="datepicker" v-model="date" :labels="['Start Date', 'End Date']">
   <template #separator>-</template>
 </ui-rangepicker>
 </template>
 
 <style scoped>
- /**/
+ /***/
 </style>
 
 <script lang="ts">
