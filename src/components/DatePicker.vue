@@ -5,6 +5,7 @@
 <template #username-dateselect>
   <v-form v-on:submit="addTimeOff">
     <ui-select
+      id="user"
       class="ui-select"
       v-model="selected"
       :options="users"
@@ -12,6 +13,7 @@
     ></ui-select>
 
     <ui-rangepicker
+      id="date"
       :class="datepicker"
       v-model="date"
       :labels="['Start Date', 'End Date']"
@@ -31,6 +33,8 @@
 </style>
 
 <script lang="ts">
+import axios from 'axios'
+
 const users = [
   { label: "Devon Hickle" },
   { label: "Luther Huset" },
@@ -48,5 +52,17 @@ export default {
       users,
     };
   },
+  methods: {
+    addTimeOff() {
+      axios.post('http://localhost:8000/timeoff', {
+        user: this.user,
+        date: this.date
+      }).then(response => {
+        console.log(response)
+      })
+      this.name = '';
+      this.date = '';
+    }
+  }
 };
 </script>
