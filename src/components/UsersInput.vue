@@ -1,7 +1,10 @@
 <template>
-  <ui-select id="team-member-name-select" v-model="selected" :options="options" @selected="onSelected($event)"
-    >
-  </ui-select>
+  <ui-select
+    id="team-member-name-select"
+    v-model="selected"
+    :options="users"
+    @selected="onSelected($event)"
+  ></ui-select>
 </template>
 
 <style scoped>
@@ -9,7 +12,7 @@
 </style>
 
 <script lang="ts">
-const options = [
+const users = [
   { label: "Devon Hickle" },
   { label: "Luther Huset" },
   { label: "Evan Long" },
@@ -23,8 +26,8 @@ const options = [
 export default {
   data() {
     return {
-      options,
-      selected: '',
+      users,
+      selected: "",
     };
   },
 };
