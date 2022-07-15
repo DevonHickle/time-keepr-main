@@ -1,3 +1,7 @@
+/* TODO
+  -Set event listeners upon selecting a user so that I can return that user in UpcomingOffline.vue and CurrentlyOffline.vue
+ */
+
 <template>
   <ui-select
     id="team-member-name-select"
@@ -27,7 +31,6 @@ export default {
   data() {
     return {
       users,
-      selected: "",
     };
   },
 };

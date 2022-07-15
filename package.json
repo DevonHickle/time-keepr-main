@@ -20,6 +20,8 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "lru-cache": "^7.12.0",
+    "mongodb": "^4.8.0",
+    "mongoose": "^6.4.4",
     "nodemon": "^2.0.19",
     "roboto-fontface": "*",
     "vue": "^3.2.37",
