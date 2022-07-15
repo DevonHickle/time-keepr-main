@@ -4,7 +4,6 @@ import DocumentationIcon from "./icons/IconDocumentation.vue";
 import EcosystemIcon from "./icons/IconEcosystem.vue";
 import CommunityIcon from "./icons/IconCommunity.vue";
 import SupportIcon from "./icons/IconSupport.vue";
-import UsersInput from "./UsersInput.vue";
 import DatePicker from "./DatePicker.vue";
 import CurrentlyOffline from "./CurrentlyOffline.vue";
 import UpcomingOffline from "./UpcomingOffline.vue";
@@ -23,17 +22,9 @@ import UpcomingOffline from "./UpcomingOffline.vue";
 
   <TimeKeeprItem>
     <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Select Your Name</template>
-    <UsersInput />
-  </TimeKeeprItem>
-
-  <TimeKeeprItem>
-    <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>Select Your Dates</template>
+    <template #heading>Input Your Time Off</template>
     <DatePicker />
   </TimeKeeprItem>
 
