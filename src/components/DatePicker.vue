@@ -52,7 +52,7 @@ export default {
       users,
     };
   },
-  methods: {
+ /* methods: {
     addTimeOff() {
       axios.post('http://localhost:8000/timeoff', {
         user: this.user,
@@ -61,8 +61,8 @@ export default {
         console.log(response)
       })
       this.name = '';
-      this.date = '';
+      this.date = ''
     }
-  }
+  }  */
 };
 </script>
