@@ -5,7 +5,7 @@ const router = Router()
 
 router.post('/', async (req, res) => {
   const newDate = new Date(req.body)
-  try  {
+  try {
     const date = await newDate.save()
     if (!date) throw new Error('No Dates Input')
     res.status(200).json(date)
