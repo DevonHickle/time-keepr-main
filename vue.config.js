@@ -10,6 +10,7 @@ module.exports = defineConfig({
   // NOTE: set alias via `configureWebpack` or `chainWebpack`
   configureWebpack: {
     devServer : {
+      port: 3000,
       proxy: {
         '/api': {
           target: 'http://localhost:8000'
