@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import Greeting from "@/components/Greeting.vue";
 import holidayOff from "./assets/holidayOff.png"
+import Greeting from "./components/Greeting.vue";
 </script>
 
 <template>
@@ -16,10 +16,7 @@ import holidayOff from "./assets/holidayOff.png"
 
     <div class="wrapper">
       <Greeting msg="Hello There!" />
-
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>

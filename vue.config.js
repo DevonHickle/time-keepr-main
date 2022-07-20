@@ -6,8 +6,16 @@ module.exports = defineConfig({
 		}
   },
   runtimeCompiler: true,
+  transpileDependencies: true,
   // NOTE: set alias via `configureWebpack` or `chainWebpack`
   configureWebpack: {
+    devServer : {
+      proxy: {
+        '/api': {
+          target: 'http://localhost:8000'
+        },
+      },
+    },
     resolve: {
       alias: {
         'balm-ui-plus': 'balm-ui/dist/balm-ui-plus.js',

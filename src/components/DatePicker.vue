@@ -8,9 +8,8 @@
       id="user"
       class="ui-select"
       v-model="selected"
-      :options="users"
       @selected="onSelected($addTimeOff)"
-    ></ui-select>
+    >{{ users.name }}</ui-select>
 
     <ui-rangepicker
       id="date"
@@ -33,9 +32,9 @@
 </style>
 
 <script lang="ts">
-import axios from 'axios'
+import axios from "axios";
 
-const users = [
+/* const users = [
   { label: "Devon Hickle" },
   { label: "Luther Huset" },
   { label: "Evan Long" },
@@ -44,25 +43,18 @@ const users = [
   { label: "Bill Tervola" },
   { label: "Andre Denny" },
   { label: "Sele Agbator" },
-];
+]; */
 
 export default {
   data() {
     return {
-      users,
+      users: [],
+      name: "",
     };
   },
- /* methods: {
-    addTimeOff() {
-      axios.post('http://localhost:8000/timeoff', {
-        user: this.user,
-        date: this.date
-      }).then(response => {
-        console.log(response)
-      })
-      this.name = '';
-      this.date = ''
-    }
-  }  */
+  /*async mounted() {
+    const response = await axios.get("api/users/");
+    this.users = response.data;
+  }, */
 };
 </script>

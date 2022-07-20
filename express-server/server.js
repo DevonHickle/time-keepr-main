@@ -32,11 +32,15 @@ let users = [
   { id: 8, name: "Sele Agbator" },
 ];
 
-app.get("/users", (req, res) => {
+let dates = [
+  { id: 1, startDate: 'Test'}
+]
+
+app.get("/api/users", (req, res) => {
   res.send(users);
 });
 
-app.get("/users/:id", (req, res) => {
+app.get("/api/users/:id", (req, res) => {
   const id = Number(req.params.id);
 
   const user = users.find((user) => user.id === id);
@@ -46,6 +50,10 @@ app.get("/users/:id", (req, res) => {
 
 app.get("/", (req, res) => {
   res.send(`Hi! Server is listening on port ${port}`);
+});
+
+app.get("/api/dates", (req, res) => {
+  res.send(dates); 
 });
 
 // listen on the port
