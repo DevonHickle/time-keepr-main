@@ -15,18 +15,16 @@ and return this information
         v-model="form.name"
       />
     </div>
+    <br />
     <div class="form-group">
-      <label for="dates">Enter Your Time Off</label><br />
+      <label for="dates">Dates</label><br />
       <ui-rangepicker>
-        type="date"
-        class="form-control"
-        id="dates"
-        placeholder="Enter A Date"
-        v-model="form.date"
-      >
-      <template #separator>-</template>
+        type="date" class="form-control" id="dates" placeholder="Enter A Date"
+        v-model="form.date" >
+        <template #separator>-</template>
       </ui-rangepicker>
     </div>
+    <br />
     <ui-button v-on:click="addTimeOff" raised>Submit</ui-button>
   </form>
 </template>
@@ -39,18 +37,18 @@ and return this information
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import UserService from "@/services/UserService"
-import type ResponseData from "@/types/ResponseData"
-import type Form from "@/types/Form"
+import UserService from "@/services/UserService";
+import type ResponseData from "@/types/ResponseData";
+import type Form from "@/types/Form";
 
-export default defineComponent ({
+export default defineComponent({
   name: "namedateInput",
   data() {
     return {
       form: {
         name: "",
         date: "",
-      },
+      } as Form,
     };
   },
   methods: {
@@ -58,13 +56,12 @@ export default defineComponent ({
       let data = {
         name: this.form.name,
         date: this.form.date,
-      }
-      UserService.create(data)
-      .then((response: ResponseData) => {
-        this.form = response.data.id
+      };
+      UserService.create(data).then((response: ResponseData) => {
+        this.form = response.data.id;
         console.log(response.data);
-      })
-      }
+      });
     },
-  })
+  },
+});
 </script>

@@ -44,3 +44,6 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Continue to model CRUD after
+```https://www.bezkoder.com/vue-node-express-mongodb-mevn-crud/

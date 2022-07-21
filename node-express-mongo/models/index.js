@@ -7,9 +7,3 @@ db.url = dbConfig.url;
 db.users = require("./users.model.js")(mongoose);
 db.dates = require("./dates.model.js")(mongoose);
 module.exports = db;
-
-
-/* 
-  Based off of:
-  https://signoz.io/blog/mevn-stack-tutorial/
-*/
