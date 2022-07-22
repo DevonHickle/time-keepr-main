@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import TimeKeeprItem from "./TimeKeeprItem.vue";
-import DocumentationIcon from "./icons/IconDocumentation.vue";
-import EcosystemIcon from "./icons/IconEcosystem.vue";
-import CommunityIcon from "./icons/IconCommunity.vue";
-import SupportIcon from "./icons/IconSupport.vue";
 import DatePicker from "./DatePicker.vue";
 import CurrentlyOffline from "./CurrentlyOffline.vue";
 import UpcomingOffline from "./UpcomingOffline.vue";
@@ -13,7 +9,6 @@ import UpcomingOffline from "./UpcomingOffline.vue";
 <template>
   <TimeKeeprItem>
     <template #icon>
-      <DocumentationIcon />
     </template>
     <template #heading>Time Off?</template>
     Enter your name and input your days off here. We will keep a log of who is
@@ -22,7 +17,6 @@ import UpcomingOffline from "./UpcomingOffline.vue";
 
   <TimeKeeprItem>
     <template #icon>
-      <DocumentationIcon />
     </template>
     <template #heading>Input Your Time Off</template>
     <DatePicker />
@@ -30,7 +24,6 @@ import UpcomingOffline from "./UpcomingOffline.vue";
 
   <TimeKeeprItem>
     <template #icon>
-      <CommunityIcon />
     </template>
     <template #heading>Currently Offline</template>
     <CurrentlyOffline />
@@ -38,7 +31,6 @@ import UpcomingOffline from "./UpcomingOffline.vue";
 
   <TimeKeeprItem>
     <template #icon>
-      <SupportIcon />
     </template>
     <template #heading>Upcoming Timeoff</template>
     <UpcomingOffline />
